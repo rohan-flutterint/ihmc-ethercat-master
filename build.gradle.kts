@@ -7,9 +7,11 @@ plugins {
 
 ihmc {
    group = "us.ihmc"
-   version = "0.12.0"
+   version = "0.12.0-halodi1"
    vcsUrl = "https://github.com/ihmcrobotics/ihmc-ethercat-master"
    openSource = true
+
+   repository("https://artifacts.halodi.com/repository/maven-open-source-group")
 
    configureDependencyResolution()
    resourceDirectory("main", "swig")
@@ -19,9 +21,9 @@ ihmc {
 app.entrypoint("SlaveInfo", "us.ihmc.etherCAT.master.SlaveInfo")
 
 mainDependencies {
-   api("us.ihmc:soem:1.4.0-ihmc1")
-   api("us.ihmc:soem-platform-linux:1.4.0-ihmc1")
+   api("us.ihmc:soem:1.4.0-halodi1")
+   api("us.ihmc:soem-platform-linux:1.4.0-halodi1")
    api("us.ihmc:ihmc-native-library-loader:1.2.1")
-   api("us.ihmc:ihmc-realtime:1.3.0")
+   api("us.ihmc:ihmc-realtime:1.3.1")
 }
 
